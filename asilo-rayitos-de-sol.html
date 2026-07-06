@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asilo Rayitos de Sol | ALKANOGA</title>
-    <!-- Vinculación con tus estilos globales -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Estilos específicos y modernos para la sección del Asilo */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,7 +14,6 @@
             color: #333;
         }
 
-        /* Navegación local */
         .nav-asilo {
             background-color: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -45,9 +42,7 @@
             color: #ff9800;
         }
 
-        /* Banner Principal */
         .hero-asilo {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('css/styles.css') no-repeat center center/cover; /* Nota: Puedes cambiar este fondo por una foto grupal del asilo si tienes una */
             background-color: #ff9800; 
             color: white;
             text-align: center;
@@ -61,10 +56,10 @@
 
         .hero-asilo p {
             font-size: 1.2rem;
-            margin: 0 auto max-width: 600px;
+            margin: 0 auto;
+            max-width: 600px;
         }
 
-        /* Sección Informativa */
         .content-container {
             max-width: 900px;
             margin: 50px auto;
@@ -87,7 +82,6 @@
             margin-top: 0;
         }
 
-        /* Sección Destacada del Enlace de Testimonios */
         .testimonios-banner-box {
             background: #fff3e0;
             border-left: 6px solid #ff9800;
@@ -112,7 +106,6 @@
             color: #5d4037;
         }
 
-        /* Botón de enlace a testimonios-rayitos.html */
         .btn-testimonios {
             display: inline-block;
             background-color: #ff9800;
@@ -128,10 +121,25 @@
         .btn-testimonios:hover {
             background-color: #e65100;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(230, 81, 0, 0.4);
         }
 
-        /* Mapa de ubicación */
+        /* Botón modificado para enviar información de otros asilos */
+        .btn-contacto-correo {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .btn-contacto-correo:hover {
+            background-color: #0b7dda;
+        }
+
         .map-responsive {
             overflow: hidden;
             padding-bottom: 400px;
@@ -162,7 +170,6 @@
 </head>
 <body>
 
-    <!-- Menú de navegación superior -->
     <nav class="nav-asilo">
         <a href="index.html" class="logo">ALKANOGA</a>
         <div class="nav-links">
@@ -172,28 +179,24 @@
         </div>
     </nav>
 
-    <!-- Encabezado de la página -->
     <header class="hero-asilo">
         <h1>Asilo Rayitos de Sol</h1>
         <p>Un hogar lleno de luz, cuidado y respeto para nuestros adultos mayores en Retalhuleu.</p>
     </header>
 
-    <!-- Contenido Principal -->
     <main class="content-container">
         
         <div class="info-card">
             <h2>Nuestra Misión</h2>
-            <p>El Asilo Rayitos de Sol se dedica a brindar un espacio digno, seguro y lleno de amor a los ancianitos de nuestra comunidad. Aquí reciben atención médica, alimentación balanceada y, sobre todo, el calor humano y acompañamiento que se merecen en esta etapa de sus vidas.</p>
+            <p>El Asilo Rayitos de Sol se dedica a brindar un espacio digno, seguro y lleno de amor a los ancianitos de nuestra comunidad. Aquí reciben atención médica, alimentación balanceada y el acompañamiento que se merecen en esta etapa de sus vidas.</p>
         </div>
 
-        <!-- SECCIÓN ENLACE: Aquí está el banner que conecta con los testimonios de los abuelitos -->
         <div class="testimonios-banner-box">
             <div class="testimonios-banner-text">
                 <h3>Voces de Sabiduría e Historia</h3>
                 <p>Descubre las memorias, consejos y valiosos relatos de vida de los residentes del asilo.</p>
             </div>
             <div>
-                <!-- Enlace directo al archivo de testimonios que creamos -->
                 <a href="testimonios-rayitos.html" class="btn-testimonios">Leer Testimonios →</a>
             </div>
         </div>
@@ -204,24 +207,24 @@
             <ul>
                 <li><strong>Donaciones en especie:</strong> Alimentos no perecederos, ropa en buen estado, cobijas y artículos de higiene personal.</li>
                 <li><strong>Voluntariado:</strong> Comparte tu tiempo conversando, realizando dinámicas o talleres con los abuelitos.</li>
-                <li><strong>Apoyo económico:</strong> Destinado directamente a medicamentos y mejoras de la infraestructura del hogar.</li>
+                <li><strong>Registrar otra institución:</strong> Si conoces o formas parte de otra entidad que necesite apoyo, puedes enviarnos sus datos directamente por correo electrónico.</li>
             </ul>
+            <!-- CORRECCIÓN AQUÍ: Enlace mailto directo a tu correo -->
+            <a href="mailto:alkanoga01@gmail.com?subject=Informacion%20de%20otro%20Asilo%20-%20ALKANOGA" class="btn-contacto-correo">Enviar datos de otro asilo</a>
         </div>
 
         <div class="info-card">
             <h2>Ubicación del Asilo</h2>
             <p>Ven a visitarnos o haz llegar tu apoyo directamente en nuestras instalaciones en Retalhuleu:</p>
             
-            <!-- Contenedor del Mapa de Google Maps optimizado -->
+            <!-- CORRECCIÓN AQUÍ: Mapa con tus coordenadas exactas -->
             <div class="map-responsive">
-                <!-- Reemplaza el src con el iframe real de Google Maps de la ubicación si lo requieres -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.43123456789!2d-91.6775!3d14.5356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMyJzA4LjIiTiA5McKwNDAnMzkuMCJX!5e0!3m2!1ses!2sgt!4v1650000000000!5m2!1ses!2sgt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?q=14.5421352,-91.6674042&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
     </main>
 
-    <!-- Pie de página integrado al estilo ALKANOGA -->
     <footer>
         <p>&copy; 2026 ALKANOGA - Conectando y apoyando a las organizaciones de Retalhuleu.</p>
     </footer>
