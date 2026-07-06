@@ -6,37 +6,60 @@
     <title>Testimonios - Asilo Rayitos de Sol | ALKANOGA</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Estilos específicos para que las fotos se vean perfectas y no obstruyan */
-        .testimonios-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        /* Estilos generales y contenedor de tarjetas */
+        body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
+        .header-section {
+            text-align: center;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .header-section h1 {
+            color: #ff9800;
+            margin-bottom: 5px;
+        }
+
+        .testimonios-container {
+            max-width: 1100px;
+            margin: 20px auto 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Tarjeta de cada Abuelito */
         .testimonio-card {
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            padding: 25px;
             text-align: center;
-            border-top: 4px solid #ff9800; /* Un color cálido de rayito de sol */
-            transition: transform 0.3s ease;
+            border-top: 4px solid #ff9800;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .testimonio-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
         }
 
+        /* Nombre arriba de la imagen */
         .viejito-name {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 12px;
-            text-transform: capitalize;
+            color: #222;
+            margin-bottom: 15px;
         }
 
         .viejito-anonimo {
@@ -45,107 +68,184 @@
             font-size: 1.1rem;
         }
 
+        /* Tamaño de imagen controlado para que no obstruya */
         .viejito-img {
-            width: 110px;  /* Tamaño controlado para que no sea gigante */
-            height: 110px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
-            border-radius: 50%; /* Formato circular para que se vea limpio y moderno */
-            border: 3px solid #eee;
+            border-radius: 50%;
+            border: 3px solid #ff9800;
             margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
-        .testimonio-text {
-            font-size: 0.95rem;
-            color: #555;
+        /* Botón Desplegable */
+        .btn-desplegar {
+            background-color: #fff3e0;
+            color: #e65100;
+            border: 2px solid #ff9800;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: auto; /* Empuja el botón al fondo de la tarjeta si varían tamaños */
+        }
+
+        .btn-desplegar:hover {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        /* Cuadrito de información oculto por defecto */
+        .testimonio-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fffde7;
+            border-left: 4px solid #fdd835;
+            border-radius: 4px;
+            text-align: left;
+            font-size: 0.9rem;
             line-height: 1.6;
-            font-style: italic;
-            margin: 0;
-            position: relative;
+            color: #444;
+            animation: fadeIn 0.4s ease;
         }
 
-        .testimonio-text::before {
-            content: '"';
-            font-size: 2rem;
-            color: #ff9800;
-            line-height: 0;
-            vertical-align: bottom;
+        .testimonio-box p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-regresar {
             display: inline-block;
-            margin: 20px auto;
+            margin-bottom: 30px;
             padding: 10px 20px;
             background-color: #ff9800;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-regresar:hover {
+            background-color: #e65100;
         }
     </style>
 </head>
 <body>
 
-    <div style="text-align: center; margin-top: 30px;">
+    <div class="header-section">
         <h1>Voces de Sabiduría e Historia</h1>
-        <p>Conoce los testimonios de los abuelitos del Asilo Rayitos de Sol</p>
+        <p>Haz clic en los abuelitos para conocer sus hermosos relatos de vida</p>
         <a href="asilo-rayitos-de-sol.html" class="btn-regresar">← Volver al Asilo</a>
     </div>
 
     <section class="testimonios-container">
 
-        <!-- CON NOMBRE -->
+        <!-- 1. DON JESÚS -->
         <div class="testimonio-card">
             <div class="viejito-name">Don Jesús</div>
             <img src="Don Jesus.jpeg" alt="Don Jesús" class="viejito-img">
-            <p class="testimonio-text">Aquí pones el testimonio real que te dio Don Jesús. "A mi me gusta mucho estar aquí por las mañanas..."</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-jesus', this)">Leer testimonio</button>
+            <div id="box-jesus" class="testimonio-box">
+                <p>Nació el 1 de octubre de 1951 y tiene 75 años. Vivió en la zona 1 de Retalhuleu[cite: 1]. Recuerda con mucho cariño y admiración a su hermano Augusto, con quien compartía el gusto por el estudio y el fútbol[cite: 1]. Trabajó gran parte de su vida como vendedor ambulante en Retalhuleu y en la frontera con México[cite: 1]. Le fascinan los dulces y el chocolate[cite: 1].</p>
+            </div>
         </div>
 
+        <!-- 2. DON MARIO -->
         <div class="testimonio-card">
             <div class="viejito-name">Don Mario</div>
             <img src="Don Mario.jpeg" alt="Don Mario" class="viejito-img">
-            <p class="testimonio-text">Aquí pones lo que te contó Don Mario. Un relato corto y emotivo sobre su día a día.</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-mario', this)">Leer testimonio</button>
+            <div id="box-mario" class="testimonio-box">
+                <p>Tiene 63 años y cumple el 1 de agosto[cite: 1]. Es muy activo, amable y le encanta ayudar en el asilo[cite: 1]. En su juventud practicaba béisbol y fútbol, temas de los que aún disfruta conversar[cite: 1]. Trabajó como albañil y vendedor ambulante[cite: 1]. Cuando llegó a la fundación tenía serias dificultades para caminar, pero gracias a sus terapias logró recuperar su movilidad de forma independiente[cite: 1].</p>
+            </div>
         </div>
 
+        <!-- 3. DON SERGIO -->
         <div class="testimonio-card">
             <div class="viejito-name">Don Sergio</div>
             <img src="Don Sergio.jpeg" alt="Don Sergio" class="viejito-img">
-            <p class="testimonio-text">Aquí va la historia o frase que compartió Don Sergio con ustedes.</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-sergio', this)">Leer testimonio</button>
+            <div id="box-sergio" class="testimonio-box">
+                <p>Es el mayor de 4 hermanos y trabajó desde muy joven para ayudarlos[cite: 1]. Dedicó su vida a la tapicería en Retalhuleu para sacar adelante a sus hijos, quienes hoy viven en EE. UU.[cite: 1]. Recuerda con alegría los fines de semana familiares comiendo tamales y caldo de res[cite: 1]. Sufrió un derrame que limitó el movimiento de uno de sus brazos, pero le alegra estar en el asilo por sus áreas verdes y paz[cite: 1].</p>
+            </div>
         </div>
 
+        <!-- 4. SRA. JUSTA -->
         <div class="testimonio-card">
             <div class="viejito-name">Sra. Justa</div>
             <img src="Sra. Justa.jpeg" alt="Sra. Justa" class="viejito-img">
-            <p class="testimonio-text">El testimonio de la Sra. Justa va en este espacio, inspirando a los visitantes.</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-justa', this)">Leer testimonio</button>
+            <div id="box-justa" class="testimonio-box">
+                <p>Originaria de San Felipe, formó una gran familia de 12 hijos y 33 nietos/bisnietos[cite: 1]. En su juventud tuvo un negocio de venta de pescado[cite: 1]. Es una mujer de profunda fe que ama escuchar el evangelio[cite: 1]. Fue víctima de violencia en el pasado, lo que afectó gravemente su vista; sin embargo, te recibe siempre con una enorme sonrisa y total disposición para conversar[cite: 1].</p>
+            </div>
         </div>
 
-
-        <!-- PROPUESTA PARA LOS QUE NO TIENEN NOMBRE (INGENIÁNDOSELAS) -->
+        <!-- ABUELITOS SIN NOMBRE (TÍTULOS CARIÑOSOS REUTILIZABLES) -->
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Abuelito de nuestro corazón</div>
             <img src="Viejito 3.jpeg" alt="Abuelito del asilo" class="viejito-img">
-            <p class="testimonio-text">"Aquí colocas el testimonio de este abuelito, destacando sus palabras llenas de experiencia."</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-v3', this)">Leer testimonio</button>
+            <div id="box-v3" class="testimonio-box">
+                <p>"Nos comparte sus mejores recuerdos y la alegría que siente al recibir visitas de jóvenes dispuestos a escuchar sus experiencias de juventud."</p>
+            </div>
         </div>
 
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Una voz de sabiduría</div>
             <img src="Viejito 4.jpeg" alt="Abuelito del asilo" class="viejito-img">
-            <p class="testimonio-text">"Otro testimonio emotivo. Aunque no tengamos su nombre a la mano, su mensaje sigue siendo muy valioso."</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-v4', this)">Leer testimonio</button>
+            <div id="box-v4" class="testimonio-box">
+                <p>"Sus palabras nos recuerdan el valor del esfuerzo diario y la importancia de mantener la sonrisa intacta sin importar las dificultades."</p>
+            </div>
         </div>
 
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Abuelito de Rayitos de Sol</div>
             <img src="Viejito 6.jpeg" alt="Abuelito del asilo" class="viejito-img">
-            <p class="testimonio-text">"Aquí puedes añadir lo que este abuelito les transmitió durante las entrevistas o visitas."</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-v6', this)">Leer testimonio</button>
+            <div id="box-v6" class="testimonio-box">
+                <p>"Un testimonio enfocado en la paz y el buen cuidado que se recibe en las instalaciones, disfrutando de las mañanas tranquilas en Retalhuleu."</p>
+            </div>
         </div>
 
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Guardián de historias</div>
             <img src="Viejito 8.jpeg" alt="Abuelito del asilo" class="viejito-img">
-            <p class="testimonio-text">"Último testimonio anónimo pero lleno de cariño y valor para la comunidad de Retalhuleu."</p>
+            <button class="btn-desplegar" onclick="toggleTestimonio('box-v8', this)">Leer testimonio</button>
+            <div id="box-v8" class="testimonio-box">
+                <p>"Agradece profundamente el apoyo de la comunidad mediante Alkanoga, transmitiendo bendiciones a todos aquellos que apoyan al asilo."</p>
+            </div>
         </div>
 
     </section>
+
+    <!-- Script de JavaScript para el despliegue dinámico -->
+    <script>
+        function toggleTestimonio(boxId, boton) {
+            var box = document.getElementById(boxId);
+            
+            if (box.style.display === "block") {
+                box.style.display = "none";
+                boton.textContent = "Leer testimonio";
+                boton.style.backgroundColor = "#fff3e0";
+                boton.style.color = "#e65100";
+            } else {
+                box.style.display = "block";
+                boton.textContent = "Cerrar";
+                boton.style.backgroundColor = "#e65100";
+                boton.style.color = "white";
+            }
+        }
+    </script>
 
 </body>
 </html>
