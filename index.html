@@ -3,68 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alkanoga | Directorio Social</title>
+    <title>ALKANOGA | Plataforma Comunitaria de Retalhuleu</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ff9800 0%, #e65100 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            margin: 0 0 15px 0;
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #222;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .grid-organizaciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #ff9800;
+            margin: 0 0 10px 0;
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-card {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-card:hover {
+            background-color: #e65100;
+        }
+
+        .contact-section {
+            background-color: #fff3e0;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 50px;
+        }
+
+        .btn-email {
+            display: inline-block;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+            transition: background 0.3s;
+        }
+
+        .btn-email:hover {
+            background-color: #0b7dda;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #333;
+            color: #white;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><a href="index.html">Alkanoga</a></h1>
-            <nav class="main-nav">
-                <a href="index.html" class="active">Inicio</a>
-                <a href="sobreproyecto.html">Sobre Nuestro Proyecto</a>
-                <a href="#directorio">Fundaciones</a>
-                <a href="#contacto">Sugerir Fundación</a>
-            </nav>
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">ALKANOGA</a>
+        <div class="nav-links">
+            <a href="index.html" style="color: #ff9800; font-weight: bold;">Inicio</a>
+            <a href="sobreproyecto.html">Sobre el Proyecto</a>
         </div>
+    </nav>
+
+    <!-- Héroe / Bienvenida -->
+    <header class="hero">
+        <h1>Bienvenidos a ALKANOGA</h1>
+        <p>Visibilizando y conectando los esfuerzos de las organizaciones sociales en Retalhuleu.</p>
     </header>
 
-    <!-- Héroe / Presentación principal -->
-    <section class="hero">
-        <div class="container">
-            <h2>Apoyemos a las instituciones que transforman Retalhuleu</h2>
-            <p>Conoce su historia, ubica sus sedes y descubre cómo puedes marcar la diferencia hoy mismo a través de tu apoyo o donación.</p>
-            <a href="#directorio" class="btn-primary">Ver Directorio</a>
-        </div>
-    </section>
+    <!-- Contenido Principal -->
+    <main class="container">
+        <h2 class="section-title">Organizaciones Registradas</h2>
 
-    <!-- Directorio de Fundaciones -->
-    <section id="directorio" class="directory-section bg-light">
-        <div class="container">
-            <h2 class="section-title">Nuestras Fundaciones</h2>
-            <div class="grid-directory" style="display: flex; justify-content: center;">
-                
-                <!-- Única Tarjeta Activa: Casa Hogar Rayito de Luz -->
-                <div class="card card-active" style="max-width: 500px; width: 100%;">
-                    <div class="card-badge badge-success">Activo</div>
-                    <div class="card-content">
-                        <h3>Casa Hogar "Rayito de Luz"</h3>
-                        <p class="location-tag">📍 Colonia El Bosque, Retalhuleu</p>
-                        <p>Institución dedicada al cuidado integral, salud y bienestar del adulto mayor en condiciones vulnerables.</p>
-                        <a href="asilo-rayitos-de-sol.html" class="btn-card">Conocer y Donar →</a>
-                    </div>
+        <div class="grid-organizaciones">
+            
+            <!-- TARJETA DEL ASILO TOTALMENTE CORREGIDA -->
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Asilo Rayitos de Luz</h3>
+                    <p class="card-text">Un hogar dedicado al cuidado integral, salud y bienestar de los adultos mayores de Retalhuleu, brindándoles un espacio digno y lleno de afecto.</p>
+                    <!-- CORRECCIÓN CLAVE: Enlace actualizado al nuevo nombre del archivo -->
+                    <a href="asilo-rayitos-de-luz.html" class="btn-card">Visitar Organización</a>
                 </div>
-
             </div>
-        </div>
-    </section>
 
-    <!-- Sección de Colaboración / Contacto -->
-    <section id="contacto" class="collab-section">
-        <div class="container text-center">
-            <h2>¿Conoces o lideras otra fundación en Retalhuleu?</h2>
-            <p>Este proyecto se construye en comunidad. Ayúdanos a expandir el directorio enviándonos la información de contacto, horarios y cuentas oficiales de otras instituciones.</p>
-            <a href="mailto:alkanoga01@gmail.com" class="btn-secondary">Enviar Información</a>
-        </div>
-    </section>
+            <!-- Espacio reservado para futuras organizaciones locales -->
+            <div class="card" style="border: 2px dashed #ccc; background: transparent; box-shadow: none; text-align: center; display: flex; align-items: center; justify-content: center;">
+                <div class="card-content">
+                    <h3 style="color: #999; margin-bottom: 10px;">Próxima Organización</h3>
+                    <p style="color: #999; font-size: 0.9rem;">Este espacio está listo para registrar más entidades benéficas de la región.</p>
+                </div>
+            </div>
 
-    <!-- Pie de página -->
-    <footer class="main-footer">
-        <div class="container text-center">
-            <p>© 2026 Alkanoga - Proyecto de Desarrollo Social. Creado con fines benéficos.</p>
         </div>
+
+        <!-- Sección de Contacto Unificada -->
+        <section class="contact-section">
+            <h2>¿Quieres que tu organización aparezca aquí?</h2>
+            <p>Trabajamos para dar a conocer las iniciativas que transforman Retalhuleu. Escríbenos para enviarnos información de otros centros o sugerencias.</p>
+            <!-- CORRECCIÓN ENLACE DE CORREO -->
+            <a href="mailto:alkanoga01@gmail.com?subject=Registro%20de%20Organizacion%20-%20ALKANOGA" class="btn-email">Contactar por Correo</a>
+        </section>
+    </main>
+
+    <footer>
+        <p style="color: #ccc; margin: 0;">&copy; 2026 ALKANOGA - Desarrollado para el apoyo comunitario en Retalhuleu.</p>
     </footer>
 
 </body>
