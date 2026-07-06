@@ -3,116 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Hogar "Rayito de Luz" | Alkanoga</title>
+    <title>Asilo Rayitos de Sol | ALKANOGA</title>
+    <!-- Vinculación con tus estilos globales -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos y modernos para la sección del Asilo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navegación local */
+        .nav-asilo {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-asilo .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Banner Principal */
+        .hero-asilo {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('css/styles.css') no-repeat center center/cover; /* Nota: Puedes cambiar este fondo por una foto grupal del asilo si tienes una */
+            background-color: #ff9800; 
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-asilo h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.8rem;
+        }
+
+        .hero-asilo p {
+            font-size: 1.2rem;
+            margin: 0 auto max-width: 600px;
+        }
+
+        /* Sección Informativa */
+        .content-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            line-height: 1.7;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff9800;
+            border-bottom: 2px solid #fff3e0;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* Sección Destacada del Enlace de Testimonios */
+        .testimonios-banner-box {
+            background: #fff3e0;
+            border-left: 6px solid #ff9800;
+            padding: 25px;
+            border-radius: 4px 12px 12px 4px;
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .testimonios-banner-text h3 {
+            margin: 0 0 5px 0;
+            color: #e65100;
+            font-size: 1.3rem;
+        }
+
+        .testimonios-banner-text p {
+            margin: 0;
+            color: #5d4037;
+        }
+
+        /* Botón de enlace a testimonios-rayitos.html */
+        .btn-testimonios {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-testimonios:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(230, 81, 0, 0.4);
+        }
+
+        /* Mapa de ubicación */
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 400px;
+            position: relative;
+            height: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><a href="index.html">Alkanoga</a></h1>
-            <nav class="main-nav">
-                <a href="index.html">Inicio</a>
-                <a href="sobreproyecto.html">Sobre Nuestro Proyecto</a>
-                <a href="#detalles">Información del Asilo</a>
-                <a href="#donaciones">¿Cómo Ayudar?</a>
-                <a href="#ubicacion">Ubicación</a>
-            </nav>
+    <!-- Menú de navegación superior -->
+    <nav class="nav-asilo">
+        <a href="index.html" class="logo">ALKANOGA</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="sobreproyecto.html">Sobre el Proyecto</a>
+            <a href="testimonios-rayitos.html" style="color: #ff9800; font-weight: bold;">Testimonios</a>
         </div>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <header class="hero-asilo">
+        <h1>Asilo Rayitos de Sol</h1>
+        <p>Un hogar lleno de luz, cuidado y respeto para nuestros adultos mayores en Retalhuleu.</p>
     </header>
 
-    <section class="page-title-banner" style="background: linear-gradient(135deg, #e65c00 0%, #ff944d 100%); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <span class="category-tag" style="background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">Hogar del Adulto Mayor</span>
-            <h2 style="color: white; font-size: 2.5rem; margin-top: 10px;">Casa Hogar "Rayito de Luz"</h2>
-            <p class="lead" style="margin-top: 5px; opacity: 0.9; font-size: 1.1rem;">Brindando amor, refugio, cuidado integral y dignidad a adultos mayores en situación de vulnerabilidad.</p>
+    <!-- Contenido Principal -->
+    <main class="content-container">
+        
+        <div class="info-card">
+            <h2>Nuestra Misión</h2>
+            <p>El Asilo Rayitos de Sol se dedica a brindar un espacio digno, seguro y lleno de amor a los ancianitos de nuestra comunidad. Aquí reciben atención médica, alimentación balanceada y, sobre todo, el calor humano y acompañamiento que se merecen en esta etapa de sus vidas.</p>
         </div>
-    </section>
 
-    <section id="detalles" class="inner-section">
-        <div class="container">
-            <h2 class="section-title">Información Básica del Asilo</h2>
+        <!-- SECCIÓN ENLACE: Aquí está el banner que conecta con los testimonios de los abuelitos -->
+        <div class="testimonios-banner-box">
+            <div class="testimonios-banner-text">
+                <h3>Voces de Sabiduría e Historia</h3>
+                <p>Descubre las memorias, consejos y valiosos relatos de vida de los residentes del asilo.</p>
+            </div>
+            <div>
+                <!-- Enlace directo al archivo de testimonios que creamos -->
+                <a href="testimonios-rayitos.html" class="btn-testimonios">Leer Testimonios →</a>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>¿Cómo puedes ayudar?</h2>
+            <p>Este espacio se sostiene gracias al apoyo incondicional de los ciudadanos. Puedes contribuir de las siguientes maneras:</p>
+            <ul>
+                <li><strong>Donaciones en especie:</strong> Alimentos no perecederos, ropa en buen estado, cobijas y artículos de higiene personal.</li>
+                <li><strong>Voluntariado:</strong> Comparte tu tiempo conversando, realizando dinámicas o talleres con los abuelitos.</li>
+                <li><strong>Apoyo económico:</strong> Destinado directamente a medicamentos y mejoras de la infraestructura del hogar.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Ubicación del Asilo</h2>
+            <p>Ven a visitarnos o haz llegar tu apoyo directamente en nuestras instalaciones en Retalhuleu:</p>
             
-            <div class="grid-directory">
-                <div class="card">
-                    <h3>¿A qué se dedican?</h3>
-                    <p>Rayitos de Luz es una casa hogar para personas de la tercera edad ubicada en Retalhuleu. Su misión es brindar alojamiento, alimentación, cuidado y acompañamiento a adultos mayores que necesitan un entorno seguro y digno donde vivir.</p>
-                    <p>La labor de Rayitos de Luz también incluye la identificación y atención de personas mayores que se encuentran en situaciones de vulnerabilidad, muchas veces sin el apoyo necesario de familiares o redes de cuidado. Más que un hogar, es un espacio donde se busca que cada persona sea tratada con respeto, dignidad y cariño para ofrecerles una mejor calidad de vida.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Información Relevante</h3>
-                    <ul class="needs-list" style="list-style-type: square; color: #555;">
-                        <li>Atiende actualmente a un grupo de <strong>9 adultos mayores</strong>.</li>
-                        <li>Las edades de los residentes oscilan entre los <strong>52 y los 82 años</strong>.</li>
-                        <li>Funciona como una organización completamente <strong>sin fines de lucro</strong>.</li>
-                        <li>Depende principalmente del apoyo familiar, recursos propios y generosas donaciones.</li>
-                        <li>La labor es posible gracias al esfuerzo y compromiso de una familia encabezada por <strong>doña Noemí y don Pablo</strong>, quienes sostienen el proyecto.</li>
-                    </ul>
-                </div>
+            <!-- Contenedor del Mapa de Google Maps optimizado -->
+            <div class="map-responsive">
+                <!-- Reemplaza el src con el iframe real de Google Maps de la ubicación si lo requieres -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.43123456789!2d-91.6775!3d14.5356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMyJzA4LjIiTiA5McKwNDAnMzkuMCJX!5e0!3m2!1ses!2sgt!4v1650000000000!5m2!1ses!2sgt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section>
 
-    <section id="donaciones" class="inner-section bg-light">
-        <div class="container">
-            <h2 class="section-title">¿Cómo Puedes Ayudar?</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 30px auto;">Existen muchas formas de apoyar a Rayitos de Luz. Las donaciones materiales contribuyen a mejorar la calidad de vida de los residentes y permiten que la institución continúe brindando atención digna a quienes viven en ella.</p>
-            
-            <div class="grid-bank-accounts">
-                <div class="bank-card" style="border-left-color: #457b9d;">
-                    <h4 style="color: #457b9d;">Donaciones de Artículos Más Frecuentes:</h4>
-                    <ul class="needs-list">
-                        <li>Alimentos y víveres.</li>
-                        <li>Ropa y calzado en buen estado.</li>
-                        <li>Cobijas y abrigo.</li>
-                        <li>Artículos de higiene personal.</li>
-                        <li>Camas, colchones y mobiliario.</li>
-                        <li>Materiales para el mantenimiento y mejoramiento de las instalaciones.</li>
-                    </ul>
-                </div>
-                <div class="bank-card">
-                    <h4>El Valor del Tiempo</h4>
-                    <p>Sin embargo, la ayuda no siempre tiene que ser material. Muchas de las personas que viven en Rayitos de Luz también valoran la compañía, la conversación, la paciencia y el interés genuino por conocer sus historias.</p>
-                    <p style="margin-top: 10px;">Una visita, una charla o simplemente compartir un momento con ellos puede significar mucho. Cada aporte, por pequeño que parezca, ayuda a construir un entorno más digno, cálido y humano.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <section id="ubicacion" class="inner-section">
-        <div class="container">
-            <div class="grid-info">
-                <div class="info-text">
-                    <h2>Ubicación y Contacto</h2>
-                    <p style="margin: 10px 0;"><strong>Dirección Exacta:</strong> Colonia El Bosque, Zona 6, 2.ª Avenida, Retalhuleu, Guatemala.</p>
-                    
-                    <div class="schedule-box">
-                        <h4>Nota de Visitas:</h4>
-                        <p>Para coordinar entregas directas de víveres, voluntariados o visitas de acompañamiento para convivir con los señores abuelitos, puedes acercarte directamente a la dirección de la sede.</p>
-                    </div>
-                </div>
-                
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.0863073995806!2d-91.6699791!3d14.5421352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCbDMyJzMxLjciTiA5McKwNDAnMDIuNyJX!5e0!3m2!1ses!2sgt!4v1719999999999!5m2!1ses!2sgt" 
-                        width="100%" 
-                        height="350" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container text-center">
-            <p><a href="index.html" class="back-link">← Volver al Directorio Principal</a></p>
-            <p>© 2026 Alkanoga - Proyecto de Desarrollo Social Escolar.</p>
-        </div>
+    <!-- Pie de página integrado al estilo ALKANOGA -->
+    <footer>
+        <p>&copy; 2026 ALKANOGA - Conectando y apoyando a las organizaciones de Retalhuleu.</p>
     </footer>
 
 </body>
