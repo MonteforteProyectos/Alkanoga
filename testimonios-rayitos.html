@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios - Asilo Rayitos de Sol | ALKANOGA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos para que las fotos se vean perfectas y no obstruyan */
+        .testimonios-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+        .testimonio-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 20px;
+            text-align: center;
+            border-top: 4px solid #ff9800; /* Un color cálido de rayito de sol */
+            transition: transform 0.3s ease;
+        }
+
+        .testimonio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .viejito-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            text-transform: capitalize;
+        }
+
+        .viejito-anonimo {
+            color: #757575;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .viejito-img {
+            width: 110px;  /* Tamaño controlado para que no sea gigante */
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%; /* Formato circular para que se vea limpio y moderno */
+            border: 3px solid #eee;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .testimonio-text {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+            margin: 0;
+            position: relative;
+        }
+
+        .testimonio-text::before {
+            content: '"';
+            font-size: 2rem;
+            color: #ff9800;
+            line-height: 0;
+            vertical-align: bottom;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <h1>Voces de Sabiduría e Historia</h1>
+        <p>Conoce los testimonios de los abuelitos del Asilo Rayitos de Sol</p>
+        <a href="asilo-rayitos-de-sol.html" class="btn-regresar">← Volver al Asilo</a>
+    </div>
+
+    <section class="testimonios-container">
+
+        <!-- CON NOMBRE -->
+        <div class="testimonio-card">
+            <div class="viejito-name">Don Jesús</div>
+            <img src="Don Jesus.jpeg" alt="Don Jesús" class="viejito-img">
+            <p class="testimonio-text">Aquí pones el testimonio real que te dio Don Jesús. "A mi me gusta mucho estar aquí por las mañanas..."</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name">Don Mario</div>
+            <img src="Don Mario.jpeg" alt="Don Mario" class="viejito-img">
+            <p class="testimonio-text">Aquí pones lo que te contó Don Mario. Un relato corto y emotivo sobre su día a día.</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name">Don Sergio</div>
+            <img src="Don Sergio.jpeg" alt="Don Sergio" class="viejito-img">
+            <p class="testimonio-text">Aquí va la historia o frase que compartió Don Sergio con ustedes.</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name">Sra. Justa</div>
+            <img src="Sra. Justa.jpeg" alt="Sra. Justa" class="viejito-img">
+            <p class="testimonio-text">El testimonio de la Sra. Justa va en este espacio, inspirando a los visitantes.</p>
+        </div>
+
+
+        <!-- PROPUESTA PARA LOS QUE NO TIENEN NOMBRE (INGENIÁNDOSELAS) -->
+        <div class="testimonio-card">
+            <div class="viejito-name viejito-anonimo">Abuelito de nuestro corazón</div>
+            <img src="Viejito 3.jpeg" alt="Abuelito del asilo" class="viejito-img">
+            <p class="testimonio-text">"Aquí colocas el testimonio de este abuelito, destacando sus palabras llenas de experiencia."</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name viejito-anonimo">Una voz de sabiduría</div>
+            <img src="Viejito 4.jpeg" alt="Abuelito del asilo" class="viejito-img">
+            <p class="testimonio-text">"Otro testimonio emotivo. Aunque no tengamos su nombre a la mano, su mensaje sigue siendo muy valioso."</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name viejito-anonimo">Abuelito de Rayitos de Sol</div>
+            <img src="Viejito 6.jpeg" alt="Abuelito del asilo" class="viejito-img">
+            <p class="testimonio-text">"Aquí puedes añadir lo que este abuelito les transmitió durante las entrevistas o visitas."</p>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="viejito-name viejito-anonimo">Guardián de historias</div>
+            <img src="Viejito 8.jpeg" alt="Abuelito del asilo" class="viejito-img">
+            <p class="testimonio-text">"Último testimonio anónimo pero lleno de cariño y valor para la comunidad de Retalhuleu."</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
