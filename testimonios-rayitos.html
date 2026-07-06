@@ -6,7 +6,7 @@
     <title>Testimonios - Asilo Rayitos de Sol | ALKANOGA</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Estilos generales y contenedor de tarjetas */
+        /* Estilos generales de la página */
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
@@ -15,6 +15,36 @@
             padding: 0;
         }
 
+        /* Menú de navegación superior idéntico al principal */
+        .nav-asilo {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-asilo .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Encabezado de la sección */
         .header-section {
             text-align: center;
             margin: 40px auto 20px auto;
@@ -23,19 +53,27 @@
 
         .header-section h1 {
             color: #ff9800;
-            margin-bottom: 5px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
+        .header-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Contenedor Grid para las Tarjetas */
         .testimonios-container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 20px auto 60px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        /* Tarjeta de cada Abuelito */
+        /* Diseño de la Tarjeta de cada Abuelito */
         .testimonio-card {
             background: #ffffff;
             border-radius: 15px;
@@ -54,7 +92,7 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
         }
 
-        /* Nombre arriba de la imagen */
+        /* Nombre del abuelito situado ARRIBA de la imagen */
         .viejito-name {
             font-size: 1.3rem;
             font-weight: bold;
@@ -68,29 +106,30 @@
             font-size: 1.1rem;
         }
 
-        /* Tamaño de imagen controlado para que no obstruya */
+        /* Tamaño de imagen controlado para que no obstruya visualmente */
         .viejito-img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ff9800;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
-        /* Botón Desplegable */
+        /* Estilo del Botón de Despliegue */
         .btn-desplegar {
             background-color: #fff3e0;
             color: #e65100;
             border: 2px solid #ff9800;
-            padding: 8px 16px;
-            font-size: 0.9rem;
+            padding: 10px 22px;
+            font-size: 0.95rem;
             font-weight: bold;
-            border-radius: 20px;
+            border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: auto; /* Empuja el botón al fondo de la tarjeta si varían tamaños */
+            margin-top: auto; /* Mantiene el botón alineado abajo */
+            outline: none;
         }
 
         .btn-desplegar:hover {
@@ -98,33 +137,38 @@
             color: white;
         }
 
-        /* Cuadrito de información oculto por defecto */
+        /* Cuadro contenedor del testimonio (Oculto por defecto) */
         .testimonio-box {
             display: none;
-            margin-top: 15px;
-            padding: 15px;
+            margin-top: 20px;
+            padding: 18px;
             background-color: #fffde7;
-            border-left: 4px solid #fdd835;
+            border-left: 4px solid #ffd54f;
             border-radius: 4px;
             text-align: left;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             color: #444;
             animation: fadeIn 0.4s ease;
         }
 
         .testimonio-box p {
-            margin: 0;
+            margin: 0 0 10px 0;
         }
 
+        .testimonio-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Animación suave al desplegar */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
+            from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Botón superior para regresar */
         .btn-regresar {
             display: inline-block;
-            margin-bottom: 30px;
             padding: 10px 20px;
             background-color: #ff9800;
             color: white;
@@ -137,16 +181,37 @@
         .btn-regresar:hover {
             background-color: #e65100;
         }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Menú de navegación superior -->
+    <nav class="nav-asilo">
+        <a href="index.html" class="logo">ALKANOGA</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="sobreproyecto.html">Sobre el Proyecto</a>
+            <a href="asilo-rayitos-de-sol.html">Volver al Asilo</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
     <div class="header-section">
         <h1>Voces de Sabiduría e Historia</h1>
-        <p>Haz clic en los abuelitos para conocer sus hermosos relatos de vida</p>
+        <p>Haz clic en el botón de cada abuelito para conocer sus relatos y experiencias de vida</p>
         <a href="asilo-rayitos-de-sol.html" class="btn-regresar">← Volver al Asilo</a>
     </div>
 
+    <!-- Sección de Tarjetas -->
     <section class="testimonios-container">
 
         <!-- 1. DON JESÚS -->
@@ -155,7 +220,9 @@
             <img src="Don Jesus.jpeg" alt="Don Jesús" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-jesus', this)">Leer testimonio</button>
             <div id="box-jesus" class="testimonio-box">
-                <p>Nació el 1 de octubre de 1951 y tiene 75 años. Vivió en la zona 1 de Retalhuleu[cite: 1]. Recuerda con mucho cariño y admiración a su hermano Augusto, con quien compartía el gusto por el estudio y el fútbol[cite: 1]. Trabajó gran parte de su vida como vendedor ambulante en Retalhuleu y en la frontera con México[cite: 1]. Le fascinan los dulces y el chocolate[cite: 1].</p>
+                <p><strong>Nacimiento y Origen:</strong> Nació el 1 de octubre de 1951 y actualmente tiene 75 años[cite: 1]. Vivió gran parte de su vida en la novena avenida de la zona 1 en Retalhuleu[cite: 1].</p>
+                <p><strong>Su Historia:</strong> Don Jesús nos compartió que tuvo un hijo, aunque prefirió mantener ese aspecto en privado[cite: 1]. De quien sí habló con muchísimo cariño y constante recuerdo fue de su hermano Augusto, una persona fundamental en su vida[cite: 1]. Desde muy joven le gustaba estudiar y llegó a practicar fútbol, aunque menciona que la verdadera pasión por este deporte la sentía su hermano[cite: 1].</p>
+                <p><strong>Experiencia Laboral:</strong> Se dedicó por muchos años a ser vendedor ambulante, un trabajo que lo llevó a recorrer varias zonas de Retalhuleu e incluso puntos fronterizos con México, permitiéndole conocer a muchísima gente[cite: 1]. Es un hombre lleno de lucidez y alegría al que le encantan los dulces y el chocolate[cite: 1].</p>
             </div>
         </div>
 
@@ -165,7 +232,9 @@
             <img src="Don Mario.jpeg" alt="Don Mario" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-mario', this)">Leer testimonio</button>
             <div id="box-mario" class="testimonio-box">
-                <p>Tiene 63 años y cumple el 1 de agosto[cite: 1]. Es muy activo, amable y le encanta ayudar en el asilo[cite: 1]. En su juventud practicaba béisbol y fútbol, temas de los que aún disfruta conversar[cite: 1]. Trabajó como albañil y vendedor ambulante[cite: 1]. Cuando llegó a la fundación tenía serias dificultades para caminar, pero gracias a sus terapias logró recuperar su movilidad de forma independiente[cite: 1].</p>
+                <p><strong>Nacimiento y Juventud:</strong> Tiene 63 años, celebra su cumpleaños el 1 de agosto y es uno de los miembros más jóvenes de la fundación[cite: 1]. En su juventud fue un gran apasionado del deporte; aunque disfrutaba más del béisbol, el fútbol ocupa un lugar muy especial en sus recuerdos de infancia y adolescencia[cite: 1].</p>
+                <p><strong>Su Vida y Trabajo:</strong> A lo largo de su vida se desempeñó como albañil y también como vendedor ambulante[cite: 1]. Aunque a veces presenta lagunas mentales que le impiden recordar cómo llegó a Rayitos de Luz, mantiene intacto su sentido del humor y sus ganas de ayudar a los demás en el asilo para devolver un poco del apoyo recibido[cite: 1].</p>
+                <p><strong>Un Gran Logro:</strong> Cuando ingresó al hogar tenía serias dificultades para caminar, pero gracias a las terapias y al acompañamiento constante logró recuperar por completo su movilidad e independencia[cite: 1]. Como anécdota divertida, cuando le pidieron permiso para tomarle una foto, respondió con una sonrisa: <em>"Bueno, pero déjenme ponerme de perfil"</em>[cite: 1].</p>
             </div>
         </div>
 
@@ -175,7 +244,9 @@
             <img src="Don Sergio.jpeg" alt="Don Sergio" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-sergio', this)">Leer testimonio</button>
             <div id="box-sergio" class="testimonio-box">
-                <p>Es el mayor de 4 hermanos y trabajó desde muy joven para ayudarlos[cite: 1]. Dedicó su vida a la tapicería en Retalhuleu para sacar adelante a sus hijos, quienes hoy viven en EE. UU.[cite: 1]. Recuerda con alegría los fines de semana familiares comiendo tamales y caldo de res[cite: 1]. Sufrió un derrame que limitó el movimiento de uno de sus brazos, pero le alegra estar en el asilo por sus áreas verdes y paz[cite: 1].</p>
+                <p><strong>Responsabilidad Familiar:</strong> Es el mayor de cuatro hermanos y, debido a esto, desde muy joven asumió la gran responsabilidad de trabajar duro para ayudar a sostener a sus dos hermanas y dos hermanos menores[cite: 1].</p>
+                <p><strong>Oficio y Recuerdos:</strong> Vivió en Retalhuleu dedicándose con esmero a la tapicería, oficio con el cual logró sacar adelante a sus hijos[cite: 1]. Guarda recuerdos hermosos de la época en que trabajó en una finca para estar cerca de ellos: recuerda que todos los sábados eran días de comer tamales y los domingos bajaba a Retalhuleu a comprar los ingredientes para preparar un caldo de res en familia[cite: 1]. Actualmente, sus hijos y su exesposa residen en Estados Unidos, pero los piensa y ama constantemente[cite: 1].</p>
+                <p><strong>Salud y Actualidad:</strong> Años atrás sufrió un derrame cerebral que limitó la movilidad de uno de sus brazos[cite: 1]. Antes estuvo en un hogar en la capital, pero prefiere por mucho Rayitos de Luz porque aquí puede disfrutar de la tranquilidad, la paz, los espacios abiertos y las áreas verdes[cite: 1].</p>
             </div>
         </div>
 
@@ -185,50 +256,60 @@
             <img src="Sra. Justa.jpeg" alt="Sra. Justa" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-justa', this)">Leer testimonio</button>
             <div id="box-justa" class="testimonio-box">
-                <p>Originaria de San Felipe, formó una gran familia de 12 hijos y 33 nietos/bisnietos[cite: 1]. En su juventud tuvo un negocio de venta de pescado[cite: 1]. Es una mujer de profunda fe que ama escuchar el evangelio[cite: 1]. Fue víctima de violencia en el pasado, lo que afectó gravemente su vista; sin embargo, te recibe siempre con una enorme sonrisa y total disposición para conversar[cite: 1].</p>
+                <p><strong>Origen y Legado:</strong> Es originaria de San Felipe y construyó una enorme y hermosa familia: nos contó con muchísimo orgullo que tiene 12 hijos y un total de 33 nietos y bisnietos que forman su historia[cite: 1]. En su juventud, trabajó incansablemente en un negocio propio de venta de pescado para sacar adelante a sus hijos[cite: 1].</p>
+                <p><strong>Fe y Fortaleza:</strong> Su fe en Dios es el pilar de su vida; es una mujer profundamente creyente que encuentra una enorme paz y compañía escuchando el evangelio[cite: 1]. Fue una de las primeras en recibirnos con una inmensa sonrisa y total apertura para platicar[cite: 1].</p>
+                <p><strong>Superación de Adversidades:</strong> Doña Justa ha enfrentado retos muy difíciles; fue víctima de violencia en el pasado y una de esas agresiones afectó gravemente su visión, perdiendo la vista de un ojo y distinguiendo únicamente siluetas con el otro[cite: 1]. A veces le cuesta recordar ciertos eventos debido a problemas de salud, pero su deseo de conversar, compartir su sabiduría y dar cariño sigue intacto[cite: 1].</p>
             </div>
         </div>
 
-        <!-- ABUELITOS SIN NOMBRE (TÍTULOS CARIÑOSOS REUTILIZABLES) -->
+        <!-- 5. VIEJITO 3 (ANÓNIMO CON TÍTULO EMOTIVO) -->
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Abuelito de nuestro corazón</div>
             <img src="Viejito 3.jpeg" alt="Abuelito del asilo" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-v3', this)">Leer testimonio</button>
             <div id="box-v3" class="testimonio-box">
-                <p>"Nos comparte sus mejores recuerdos y la alegría que siente al recibir visitas de jóvenes dispuestos a escuchar sus experiencias de juventud."</p>
+                <p>"Nos comparte sus mejores recuerdos de juventud en la región y expresa la enorme alegría y vitalidad que siente cada vez que jóvenes de la comunidad se toman el tiempo de visitarlos, conversar y escuchar con atención sus vivencias."</p>
             </div>
         </div>
 
+        <!-- 6. VIEJITO 4 (ANÓNIMO CON TÍTULO EMOTIVO) -->
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Una voz de sabiduría</div>
             <img src="Viejito 4.jpeg" alt="Abuelito del asilo" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-v4', this)">Leer testimonio</button>
             <div id="box-v4" class="testimonio-box">
-                <p>"Sus palabras nos recuerdan el valor del esfuerzo diario y la importancia de mantener la sonrisa intacta sin importar las dificultades."</p>
+                <p>"A través de sus gentiles palabras, nos recuerda el verdadero valor del esfuerzo diario, el trabajo honrado y la importancia vital de mantener una actitud alegre ante la vida, sin importar las dificultades del camino."</p>
             </div>
         </div>
 
+        <!-- 7. VIEJITO 6 (ANÓNIMO CON TÍTULO EMOTIVO) -->
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Abuelito de Rayitos de Sol</div>
             <img src="Viejito 6.jpeg" alt="Abuelito del asilo" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-v6', this)">Leer testimonio</button>
             <div id="box-v6" class="testimonio-box">
-                <p>"Un testimonio enfocado en la paz y el buen cuidado que se recibe en las instalaciones, disfrutando de las mañanas tranquilas en Retalhuleu."</p>
+                <p>"Su testimonio se centra en la inmensa paz y el excelente cuidado integral que recibe dentro de las instalaciones del hogar, destacando lo mucho que disfruta caminar libremente por los corredores durante las mañanas."</p>
             </div>
         </div>
 
+        <!-- 8. VIEJITO 8 (ANÓNIMO CON TÍTULO EMOTIVO) -->
         <div class="testimonio-card">
             <div class="viejito-name viejito-anonimo">Guardián de historias</div>
             <img src="Viejito 8.jpeg" alt="Abuelito del asilo" class="viejito-img">
             <button class="btn-desplegar" onclick="toggleTestimonio('box-v8', this)">Leer testimonio</button>
             <div id="box-v8" class="testimonio-box">
-                <p>"Agradece profundamente el apoyo de la comunidad mediante Alkanoga, transmitiendo bendiciones a todos aquellos que apoyan al asilo."</p>
+                <p>"Agradece de todo corazón el apoyo desinteresado de la comunidad de Retalhuleu a través de la plataforma ALKANOGA. Aprovecha el espacio para enviar bendiciones y mensajes de gratitud a todas las personas que contribuyen al asilo."</p>
             </div>
         </div>
 
     </section>
 
-    <!-- Script de JavaScript para el despliegue dinámico -->
+    <!-- Pie de página integrado -->
+    <footer>
+        <p>&copy; 2026 ALKANOGA - Conectando y apoyando a las organizaciones de Retalhuleu.</p>
+    </footer>
+
+    <!-- Lógica de control con JavaScript -->
     <script>
         function toggleTestimonio(boxId, boton) {
             var box = document.getElementById(boxId);
